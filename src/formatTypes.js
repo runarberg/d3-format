@@ -1,9 +1,11 @@
+import formatBinaryPrefixAuto from "./formatBinaryPrefixAuto.js";
 import formatDecimal from "./formatDecimal.js";
 import formatPrefixAuto from "./formatPrefixAuto.js";
 import formatRounded from "./formatRounded.js";
 
 export default {
   "%": (x, p) => (x * 100).toFixed(p),
+  "B": formatBinaryPrefixAuto,
   "b": (x) => Math.round(x).toString(2),
   "c": (x) => x + "",
   "d": formatDecimal,
